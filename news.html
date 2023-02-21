@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="news/news.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>Einkaufsliste = Neuigkeiten</title>
+</head>
+<body>
+    <header class="header">
+        <a href="news.html" class="header_headline">Neuigkeiten</a>
+        <div class="header_menu_items">
+            <a class="header_menu_item" href="index.html">Einkaufsliste</a>
+            <a class="header_menu_item" href="favorites.html">Favoriten</a>
+            <a class="header_menu_item" href="news.html">Neuigkeiten</a>
+            <a class="header_menu_item" href="feedback.html">Feedback</a>
+        </div>
+        <button class="header_menu_button" onclick="openMenu()">≡</button>
+    </header>
+    <div class="body_content">
+        <div class="update_info_content">
+            <h2>Funktions Update</h2>
+            <p>In diesem Update wurde die Funktion "Favoriten" hinzugefügt, die es dem Benutzer ermöglicht, Gegenstände des täglichen Bedarfs mit nur einem Klick zur Einkaufsliste hinzuzufügen. Dadurch wird der Alltag mit der Einkaufsliste noch einfacher. Bitte beachten Sie, dass aufgrund umfangreicher Änderungen am System Fehler auftreten können. Wenn Sie Fehler feststellen, wenden Sie sich bitte an den Support.</p>
+            <div class="update_info_content_share_content">
+                <h4>Update Teilen: </h4>
+                <a href="WhatsApp://send?text=Starte jetzt mit deiner Einkaufsliste auf https://rembeltodo.netlify.app . Schauen sie sich jetzt die neuen Funktionen an."> <img src="data/pictures/whatsAppLogo.png" alt="whatsAppLogo" width="50px" height="50px"></a>
+            </div>
+        </div>
+        <div class="update_info_content">
+            <h2>Allgemeines Update</h2>
+            <p>Mit dem allgemeinen Update sind zahlreiche Neuheiten ins System gekommen. Eine der größten Neuerungen ist die komplette Überarbeitung des Designs der Website. Durch die umfassende Verbesserung des Designs wurde versucht, den Alltag mit der Einkaufsliste noch mehr zu vereinfachen und mit dem übersichtlichen Design die Funktionen einfach einzubinden. Um den Alltag und die Flexibilität noch mehr zu verbessern, hat nun auch die Teilen-Funktion auf die Website geschafft. Wenn Sie auf der Einkaufsliste sind und dann über das Menü auf "Teilen" drücken, können Sie den Link direkt kopieren oder ihn über WhatsApp teilen. So können Sie Ihre Einkaufsliste direkt und einfach mit anderen teilen. Hier im neuen "Neuigkeiten"-Tab können Sie immer auf dem neuesten Stand bleiben.</p>
+            <div class="update_info_content_share_content">
+                <h4>Update Teilen: </h4>
+                <a href="WhatsApp://send?text=Starte jetzt mit deiner Einkaufsliste auf https://rembeltodo.netlify.app . Ein neues Update hat die Einkaufsliste erreicht und damit auch neue Funktionen."> <img src="data/pictures/whatsAppLogo.png" alt="whatsAppLogo" width="50px" height="50px"></a>
+            </div>
+        </div>
+    </div>
+    <button class="menu_siteopacity" onclick="closeMenu()"></button>
+    <script src="index/menuScript.js"></script>
+    <div class="menu">
+        <div class="menu_items">
+            <a href="index.html" onclick="closeMenu()">Einkaufsliste</a>
+            <a href="favorites.html" onclick="closeMenu()">Favoriten</a>
+            <a href="news.html" onclick="closeMenu()">Neuigkeiten</a>
+            <a href="feedback.html" onclick="closeMenu()">Feedback</a>
+        </div>
+    </div>
+    <dialog id="share_dialog" class="share_dialog">
+        <header>
+            <h3>Einkaufsliste Teilen</h3>
+            <button class="share_dialog_close_button" onclick="closeShareMenu()">X</button>
+        </header>
+        <div class="share_dialog_content">
+            <button onclick="shareWhatsApp()" class="share_dialog_content_whatsApp_button"> <img src="data/pictures/whatsAppLogo.png" alt="WhatsApp_Logo" width="70px" height="70px" height="100%" width="100%"> WhatsApp</button>
+            <div class="share_dialog_content_linkbar">
+                <input readonly type="text" class="share_dialog_content_linkbar_text">
+                <button onclick="shareCopy()" class="share_dialog_content_linkbar_copybutton">Kopieren</button>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>Einkaufsliste</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="header_headline">Einkaufsliste</a>
+        <div class="header_menu_items">
+            <a class="header_menu_item" href="index.html">Einkaufsliste</a>
+            <a class="header_menu_item" href="favorites.html">Favoriten</a>
+            <a class="header_menu_item" href="news.html">Neuigkeiten</a>
+            <a class="header_menu_item" href="feedback.html">Feedback</a>
+            <a class="header_menu_item" onclick="openShareMenu()">Teilen</a>
+        </div>
+        <button class="header_menu_button" onclick="openMenu()">≡</button>
+    </header>
+    <button class="menu_siteopacity" onclick="closeMenu()"></button>
+    <script src="index/menuScript.js"></script>
+    <div class="body_content">
+        <div class="body_content_productAdder">
+            <form class="body_content_productAdder_text" action="#">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="sample1">
+                    <label class="mdl-textfield__label" for="sample1">Produkt hinzufügen...</label>
+                </div>
+            </form>
+            <input class="body_content_productAdder_submit" type="submit" value="Hinzufügen" onclick="addItem()">
+            <script>
+                var input = document.getElementsByClassName("mdl-textfield__input")[0];
+                // Execute a function when the user presses a key on the keyboard
+                input.addEventListener("keypress", function (event) {
+                    // If the user presses the "Enter" key on the keyboard
+                    if (event.key === "Enter") {
+                        // Cancel the default action, if needed
+                        event.preventDefault();
+                        // Trigger the button element with a click
+                        document.getElementsByClassName("body_content_productAdder_submit")[0].click();
+                    }
+                });
+            </script>
+        </div>
+        <div class="body_content_list">
+            <ul class="body_content_list_ul">
+                <li class="body_content_list_ul_li">
+                    <p>Brot</p>
+                    <div class="body_content_list_buttons"> <button>+</button>
+                        <p>1</p> <button>-</button> <button>X</button>
+                    </div>
+                </li>
+                <li class="body_content_list_ul_li">
+                    <p class="body_content_list_ul_li_item_name">Äpfel</p>
+                    <div class="body_content_list_buttons"> <button class="body_content_list_itemCount_button">+</button>
+                        <p class="body_content_list_buttons_p">1</p> <button class="body_content_list_itemCount_button">-</button> <button class="body_content_list_buttons_remove_button">X</button>
+                    </div>
+                </li>
+                <li class="body_content_list_ul_li">
+                    <p>Äpfelaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <div class="body_content_list_buttons"> <button>+</button>
+                        <p>1</p> <button>-</button> <button>X</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="menu">
+        <div class="menu_items">
+            <a href="index.html" onclick="closeMenu()">Einkaufsliste</a>
+            <a href="favorites.html" onclick="closeMenu()">Favoriten</a>
+            <a href="news.html" onclick="closeMenu()">Neuigkeiten</a>
+            <a href="feedback.html" onclick="closeMenu()">Feedback</a>
+            <a href="#" onclick="closeMenu(); openShareMenu()">Teilen</a>
+        </div>
+    </div>
+    <dialog id="share_dialog" class="share_dialog">
+        <header>
+            <h3>Einkaufsliste Teilen</h3>
+            <button class="share_dialog_close_button" onclick="closeShareMenu()">X</button>
+        </header>
+        <div class="share_dialog_content">
+            <button onclick="shareWhatsApp()" class="share_dialog_content_whatsApp_button"> <img src="data/pictures/whatsAppLogo.png" alt="WhatsApp_Logo" width="70px" height="70px" height="100%" width="100%"> WhatsApp</button>
+            <div class="share_dialog_content_linkbar">
+                <input readonly type="text" class="share_dialog_content_linkbar_text">
+                <button onclick="shareCopy()" class="share_dialog_content_linkbar_copybutton">Kopieren</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog class="addList_dialog">
+        <h3 class="addList_dialog_headline">Einkaufsliste Laden</h3>
+        <div class="addList_dialog_text_box"><p class="addList_dialog_text_headline">Ersetzen:</p><p>Ihre Aktuelle Liste wird gelöscht und die neue Einkaufsliste wird an Stelle der alten Einkaufsliste eingefügt.</p></div>
+        <div class="addList_dialog_text_box"><p class="addList_dialog_text_headline">Hinzufügen:</p><p>Ihre Aktuelle Einkaufsliste bleibt erhalten und wird mit den Produkten der neuen Einkaufsliste ergänzt</p></div>
+        <button class="addList_dialog_cancle" onclick="cancleAddMenu()" >Abbrechen</button>
+        <button class="addList_dialog_setbutton" onclick="setContent()">Ersetzen</button>
+        <button class="addList_dialog_insertbutton" onclick="insertContent()">Hinzufügen</button>
+        </dialog>
+    <script src="index/listScript.js"></script>
+</body>
+
+</html>

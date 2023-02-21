@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feedback/feedback.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>Einkaufsliste - Feedback</title>
+</head>
+<body>
+    <header class="header">
+        <a href="feedback.html" class="header_headline">Feedback</a>
+        <div class="header_menu_items">
+            <a class="header_menu_item" href="index.html">Einkaufsliste</a>
+            <a class="header_menu_item" href="favorites.html">Favoriten</a>
+            <a class="header_menu_item" href="news.html">Neuigkeiten</a>
+            <a class="header_menu_item" href="feedback.html">Feedback</a>
+        </div>
+        <button class="header_menu_button" onclick="openMenu()">≡</button>
+    </header>
+    <p class="not_reacheble_screen">Momentan nicht verfügbar</p>
+    <button class="menu_siteopacity" onclick="closeMenu()"></button>
+    <script src="index/menuScript.js"></script>
+    <div class="menu">
+        <div class="menu_items">
+            <a href="index.html" onclick="closeMenu()">Einkaufsliste</a>
+            <a href="favorites.html" onclick="closeMenu()">Favoriten</a>
+            <a href="news.html" onclick="closeMenu()">Neuigkeiten</a>
+            <a href="feedback.html" onclick="closeMenu()">Feedback</a>
+        </div>
+    </div>
+    <dialog id="share_dialog" class="share_dialog">
+        <header>
+            <h3>Einkaufsliste Teilen</h3>
+            <button class="share_dialog_close_button" onclick="closeShareMenu()">X</button>
+        </header>
+        <div class="share_dialog_content">
+            <button onclick="shareWhatsApp()" class="share_dialog_content_whatsApp_button"> <img src="data/pictures/whatsAppLogo.png" alt="WhatsApp_Logo" width="70px" height="70px" height="100%" width="100%"> WhatsApp</button>
+            <div class="share_dialog_content_linkbar">
+                <input readonly type="text" class="share_dialog_content_linkbar_text">
+                <button onclick="shareCopy()" class="share_dialog_content_linkbar_copybutton">Kopieren</button>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>

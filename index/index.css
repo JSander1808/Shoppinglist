@@ -1,0 +1,456 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    min-height: 500px;
+    width: 100%;
+}
+
+.header{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: #234bff;
+}
+
+.header_headline{
+    text-decoration: none;
+    color: black;
+    font-size: 55px;
+    margin-left: 10px;
+    margin-top: 25px;
+    transition: 0ms;
+}
+
+.header_menu_items{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+
+.header_menu_items a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    transition: 200ms;
+    font-size: 20px;
+}
+
+.header_menu_items a:hover{
+    color: #414040;
+    cursor: pointer;
+}
+
+.header_menu_button{
+    margin-left: auto;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: black;
+    background-color: #234bff;
+    border: 0px;
+    display: none;
+    transition: 200ms;
+}
+
+.header_menu_button:hover{
+    background-color: #4f70ff;
+    cursor: pointer;
+}
+
+.menu{
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background-color: white;
+    top: 0px;
+    right: 0px;
+    transition: 200ms;
+    margin-right: -250px;
+}
+
+.menu button{
+    margin-left: 205px;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background-color: white;
+    border: 0px;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.menu_items{
+    display: flex;
+    flex-direction: column; 
+}
+
+.menu_items a{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+    transition: 200ms;
+}
+
+.menu_items a:hover{
+    background-color: #c9c9c9;
+}
+
+.menu_items a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu_siteopacity{
+    background-color: black;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    border: 0px;
+    transition: 200ms;
+    visibility: collapse;
+}
+
+.share_dialog{
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.share_dialog header{
+    display: flex;
+}
+
+.share_dialog_close_button{
+    top: 50px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: white;
+    transition: 200ms;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+.share_dialog_close_button:hover{
+    background-color: #a7a7a7;
+    cursor: pointer;
+}
+
+.share_dialog h3{
+    margin: 5px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.share_dialog_content{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.share_dialog_content_whatsApp_button{
+    background-color: white;
+    border: 0px;
+    height: 70px;
+    width: 70px;
+    height: 100px;
+    width: 80px;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.share_dialog_content_whatsApp_button:hover{
+    background-color: #a7a7a7;
+    cursor: pointer;
+}
+
+.share_dialog_content_linkbar{
+    background-color: #d8d8d8;
+    margin-top: 30px;
+    padding: 5px;
+    display: flex;
+    border: 0px;
+    border-radius: 5px;
+    width: 285px;
+}
+
+.share_dialog_content_linkbar_text{
+    background-color: #bbbbbb;
+    width: 200px;
+    height: 20px;
+    border: 0px solid #bbbbbb;
+    margin: 0px;
+    resize: none;
+    font-size: 15px;
+}
+
+.share_dialog_content_linkbar_copybutton{
+    height: 24px;
+    width: 80px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 5px;
+    background-color: #a7a7a7;
+    border: 0px;
+    transition: 200ms;
+}
+
+.share_dialog_content_linkbar_copybutton:hover{
+    background-color: #5f5f5f;
+    cursor: pointer;
+}
+
+.body_content{
+    margin-top: 90px;
+    margin-left: 20px;
+    max-width: 100%;
+}
+
+.body_content_productAdder{
+    display: flex;
+    margin-left: 40px;
+    transition: 200ms;
+}
+
+.body_content_productAdder_submit{
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #234bff;
+    width: 150px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 200ms;
+    font-size: 17px;
+    opacity: 0;
+}
+
+.body_content_productAdder_submit:hover{
+    background-color: #4f70ff;
+    cursor: pointer;
+}
+
+.body_content_list{
+    margin-top: 30px;
+}
+
+.body_content_list_ul_li{
+    font-size: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    transition: 200ms;
+}
+
+.body_content_list_buttons{
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 200ms;
+}
+
+.body_content_list ul{
+    transition: 200ms;
+}
+
+.body_content_list_ul_li_item_name{
+    max-width: 450px;
+    height: auto;
+    font-size: 23px;
+    word-break: break-all;
+    white-space: normal;
+    word-wrap: normal 
+}
+
+.body_content_list_itemCount_button{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #234bff;
+    border-radius: 5px;
+    border: 0px;
+    margin-left: 20px;
+    font-size: 25px;
+    transition: 200ms;
+}
+
+.body_content_list_buttons_remove_button{
+    background-color: white;
+    color: #ff0000;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    margin-left: 20px;
+    font-size: 25px;
+    transition: 200ms;
+    width: 40px;
+    height: 40px;
+}
+
+.body_content_list_buttons_p{
+    margin-left: 20px;
+    font-size: 35px;
+    margin-top: 8px;
+}
+
+.body_content_list_itemCount_button:hover{
+    background-color: #4f70ff;
+    cursor: pointer;
+}
+
+.body_content_list_buttons_remove_button:hover{
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+}
+
+.addList_dialog{
+    margin: auto;
+    padding: 5px;
+}
+
+.addList_dialog_text_headline{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.addList_dialog_text_box{
+    display: flex;
+}
+
+.addList_dialog_setbutton{
+    margin-right: 10px;
+    width: 120px;
+    height: 35px;
+    background-color: white;
+    color: #234bff;
+    border: 1px solid #234bff;
+    border-radius: 5px;
+    float: right;
+    transition: 200ms;
+    font-size: 15px;
+}
+
+.addList_dialog_setbutton:hover{
+    background-color: #234bff;
+    color: white;
+    cursor: pointer;
+}
+
+.addList_dialog_insertbutton{
+    width: 120px;
+    height: 35px;
+    background-color: #234bff;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 10px;
+    transition: 200ms;
+    font-size: 15px;
+}
+
+.addList_dialog_insertbutton:hover{
+    background-color: #4f70ff;
+    cursor: pointer;
+}
+
+.addList_dialog_cancle{
+    width: 120px;
+    height: 35px;
+    background-color: white;
+    color: #234bff;
+    border: 1px solid #234bff;
+    border-radius: 5px;
+    float: right;
+    transition: 200ms;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.addList_dialog_cancle:hover{
+    background-color: #234bff;
+    cursor: pointer;
+    color: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .header_menu_button{
+        visibility: visible;
+        display: block;
+    }
+    .header_menu_items{
+        margin-left: 0px;
+        visibility: collapse;
+    }
+    .header_menu_item{
+        visibility: collapse;
+        display: none;
+    }
+    .header_headline{
+        font-size: 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .body_content_productAdder form{
+        width: 55%;
+    }
+    .body_content_productAdder_submit{
+        width: 40%;
+    }
+    .body_content_list_itemCount_button{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .body_content_list_buttons_remove_button{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .body_content_list_buttons p{
+        font-size: 23px;
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+    .body_content_productAdder{
+        margin-left: 0px;
+    }
+    .body_content_list ul{
+        padding-left: 0px;
+    }
+    .body_content_list ul li p{
+        max-width: 190px;
+        word-break: break-all;
+        white-space: normal;
+        word-wrap: normal
+    }
+    .addList_dialog_setbutton{
+        width: 100px;
+    }
+    .addList_dialog_insertbutton{
+        width: 100px;
+    }
+    .addList_dialog_cancle{
+        width: 100px;
+    }
+}
